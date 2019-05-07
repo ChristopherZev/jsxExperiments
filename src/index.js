@@ -9,7 +9,9 @@ const App = () =>{
 	{/* for="name" adds the functionatlity for 
 		clicking on a label to directly go take 
 	user into field "name" is just the ID */}
-  			<label class="label" for="name"> Enter Name: </label>
+  			<label className="label" for="name"> Enter Name: </label>
+  	{/*Must use ClassName instead of class to 
+  		avoid collisions with Class keyword in React*/}
   			<input id="name" type="text"/>
   		{/* custom styling in JSX*/}
   			<button style={{backgroundColor: 'blue', color: 'white'}}> Submit </button>
