@@ -29,7 +29,9 @@ function funcButtonText(){
 	{/* for="name" adds the functionatlity for 
 		clicking on a label to directly go take 
 	user into field "name" is just the ID */}
-  			<label className="label" for="name"> 
+
+	{/*To fix 'for' warning changed for to htmlFor*/}
+  			<label className="label" htmlFor="name"> 
   				Enter Name: 
   			</label>
   	{/*Must use ClassName instead of class to 
