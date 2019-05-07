@@ -4,6 +4,18 @@ import ReactDOM from 'react-dom';
 
 //Create a React Component
 const App = () =>{
+
+//Declare a variable or a function like seen below
+//to call the func or variable via the JSX below 
+const buttonText = 'Click Me!';
+
+function getButtonText(){
+	return 'Function Call Submit'; 
+}
+
+//---------------------------------------------------------------
+
+
 	return( 
 		<div>
 	{/* for="name" adds the functionatlity for 
@@ -11,10 +23,17 @@ const App = () =>{
 	user into field "name" is just the ID */}
   			<label className="label" for="name"> Enter Name: </label>
   	{/*Must use ClassName instead of class to 
-  		avoid collisions with Class keyword in React*/}
+  		avoid collisions with Class keyword in React,
+  		may be deprecated in the future*/}
   			<input id="name" type="text"/>
-  		{/* custom styling in JSX*/}
-  			<button style={{backgroundColor: 'blue', color: 'white'}}> Submit </button>
+  		{/* custom styling in JSX and call JS variables and functions*/}
+  			<button style={{backgroundColor: 'blue', color: 'white'}}>
+  			 {buttonText} </button>
+  				{/*or --------*/}
+  			 <button style={{backgroundColor: 'blue', color: 'white'}}>
+  			 {getButtonText()} </button>
+
+
 		
 		</div>
 	);
